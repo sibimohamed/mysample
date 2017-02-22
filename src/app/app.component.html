@@ -1,38 +1,8 @@
 
-  
-  <head>
-<style>
-rotate
-{
-  border:1px;
-  width:130px;
-  height:150px;
-  -ms-transform:rotate(270deg); /* IE 9 */
-  -moz-transform:rotate(270deg); /* Firefox */
-  -webkit-transform:rotate(45deg); /* Safari and Chrome */
-  -o-transform:rotate(270deg); /* Opera */
-}
-.flex-grid {
-  display: flex;
-}
-.col {
-  flex: 1;
-}
+ <app-button-list></app-button-list>
+ <app-rotate-column></app-rotate-column>
 
-
-
-</style>
-</head>
-<body>
-  <div class="flex-grid">
-  <div class="col"></div>
-  <div class="col"></div>
-  <div class="col"></div>
-</div>
-<br><br><br>
-<div class="rotate"><h3>{{title}}</h3></div>
-<div class="rotate"><h3>{{title}}</h3></div>
-<div class="rotate"><h3>{{title}}</h3></div>
-<div class="rotate"><h3>{{title}}</h3></div>
-</body>
-
+  <button class="mdl-button mdl-js-button mdl-js-ripple-effect
+            mdl-button--accent mdl-button--raised" (click)="showConfirmDialog()">Show confirm dialog
+            </button>
+             <app-modal-confirm></app-modal-confirm>

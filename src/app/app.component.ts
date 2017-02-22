@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ModalDialogService} from '../component/modal-dialog/modal-dialog.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Vertical Text';
+
+  constructor(private _confirmService: ModalDialogService) {
+
+  }
+
+  showConfirmDialog() {
+        this._confirmService.activate('Are you sure?')
+            .then(res => console.log(`Confirmed: ${res}`));
+    }
 }

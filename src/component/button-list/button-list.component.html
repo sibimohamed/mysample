@@ -1,0 +1,9 @@
+        <div class="rows btn-group">
+            <button *ngIf="showSaveNew" class="btn btn-primary" (click)="saveNewRow(formGroup.value)">Save</button>
+            <div *ngIf="showAdvanceSave" class="dropdown">
+                <button (click)="onAdvanceMenuToggle()" class="dropbtn fa fa-caret-down"></button>
+                <div class="dropdown-content" [style.display]="advanceMenuClass">
+                    <a *ngFor="let action of advanceActions" (click)="onAdvanceMenuSelect(formGroup.value)" href="#">{{action}}</a>
+                </div>
+            </div>
+        </div>
